@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom-2</title>
+    <link rel="stylesheet" href="./styles.css">
+    <!-- <script src="./script.js" async></script> -->
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <h1 class="heading1" id="myId">Hello World</h1>
+    <h1 class="heading1">My Name is Mayank Gupta</h1>
+
+
+    <!-- mouse-events -->
+    <div ondrag='console.log("mouse hover event is activated")'>Hit me!!!</div>
+
+    <div onmouseleave="console.log('mouse leave event is activated')">Hit me!!!</div>
+
+    <div onmouseout="console.log('mouse out event is activated')">Hit me!!!</div>
+
+    <div id="mydiv">
+        Hit me!!!
+        <ul>
+            <li>my</li>
+            <li>name</li>
+            <li>mayank</li>
+        </ul>
+    </div> 
+    <a href="https://www.linkedin.com/in/mayank-gupta-752328173/" onclick="preventNav(event)">Inner JS preventDefault</a>
+    <br>
+    <a href="https://www.linkedin.com/in/mayank-gupta-752328173/" id="link">External JS preventDefault</a>
+
+    <!-- keyboard-event-->
+
+    <script>
+        //*preventDefault
+        function preventNav(event){
+            event.preventDefault();
+            alert("event is prevented");
+        }
+    </script>
+    <!-- <script src="./script.js"></script> -->
+</body>
+</html>

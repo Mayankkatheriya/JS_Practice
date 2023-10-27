@@ -1,0 +1,15 @@
+
+body{
+    font-family:'Open Sans', sans-serif !important ;
+    background:#f5f5f5;
+    color:#738291;
+    }
+.menu{
+    
+    font-size: 24px;
+    font-weight: bold;
+}
+.menu li a {
+    text-decoration: none;
+    color: rgb(223, 149, 12);
+}

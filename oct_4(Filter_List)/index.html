@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1 id="main-heading">Date: 04/10/2023 🍾 </h1>
+
+    <ul class="menu">
+        <li><a href="#">Home</a></li>
+    </ul>
+
+
+    <div id="parent">
+        I am parent of two children
+        <div id="child">
+            <p>I am the first Child</p>
+        </div>
+    </div>
+ 
+    <input type="radio" name="gender" id="gender" value="male" onclick="filterList()">Male;
+    <input type="radio" name="gender" id="gender" value="female" onclick="filterList()">Female;
+
+    <ul id="myList">
+        <li data-gender="female">Trisha</li>
+        <li data-gender="female">Kaveri</li>
+        <li data-gender="male">Mayank</li>
+        <li data-gender="female">Mansi</li>
+        <li data-gender="male">Jaiten</li>
+        <li data-gender="male">Rupesh</li>
+        <li data-gender="female">Bhumika</li>
+        <li data-gender="male">Lokesh</li>
+        <li data-gender="male">Ranjeet</li>
+        <li data-gender="male">Nipun</li>
+    </ul>
+    <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+div{
+    padding: 50px;
+}
+#grandfather{
+    border: 2px solid red;
+}
+#father{
+    border: 2px solid yellow;
+}
+#son{
+    border: 2px solid blue;
+}

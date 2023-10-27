@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.image{
+    width: 100%;
+    max-width: 600px;
+    height: 300px;
+    margin-bottom: 2rem;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 10px solid grey;
+}
+p{
+    font-size: 2rem;
+    text-align:center;
+    font-weight: 700;
+    display: none;
+}
+img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}

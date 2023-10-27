@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StopWatch</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <h1>StopWatch</h1>
+    <div id="timer">00 hr : 00 min : 00 sec</div>
+    <button onclick="startStopWatch()">Start</button>
+    <button onclick="resetStopWatch()">Reset</button>
+    <script>
+        let seconds = 0;
+        let minutes = 0;
+        let hours = 0;
+        let timer = document.getElementById('timer')
+        function startStopWatch(){
+            setInterval(updateStopWatch, 1000)
+        }
+        function updateStopWatch() {
+            seconds++;
+            if(seconds===60){
+                minutes++;
+                seconds=0;
+                if(minutes===60){
+                    hours++;
+                    minutes=0;
+                }
+            }
+            timer.innerText=`${hours} hr : ${minutes} min : ${seconds} sec`;
+        }
+        function resetStopWatch () {
+            seconds="00";
+            minutes="00";
+            hours= "00";
+            timer.innerText=`${hours} hr : ${minutes} min : ${seconds} sec`;
+        }
+    </script>
+</body>
+</html>
