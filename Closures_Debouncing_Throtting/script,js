@@ -1,0 +1,39 @@
+// TODO Clousers
+
+
+//?simple function
+// var sum = function (a){
+//     console.log(a);
+//     let c = 10
+// }
+// sum(5);
+
+//? little bit complicated where closures are used
+// var sum = function (a){
+//     console.log(a);
+//     let c = 10
+//     return function(b){
+//         console.log(a + c + b)
+//     }
+// }
+// sum(5) //print only a
+// let res = sum(5); //print a and return a function and store inside res
+// console.log(res); //print returned function
+// res(7); // print a+c+b
+
+//? functions in object
+
+// var sum = function (a,b,c){
+//     return {
+//         getSumOfTwo : function () {
+//             console.log(a+c)
+//         },
+//         getSumOfThree : function () {
+//             console.log(a+b+c)
+//         }
+//     }
+// }
+// let obj = sum(2,3,4);
+// console.log(obj);
+// obj.getSumOfTwo()
+// obj.getSumOfThree()
