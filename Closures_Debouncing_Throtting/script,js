@@ -1,10 +1,8 @@
 // TODO Clousers
 
-
 //?simple function
 // var sum = function (a){
 //     console.log(a);
-//     let c = 10
 // }
 // sum(5);
 
@@ -12,11 +10,12 @@
 // var sum = function (a){
 //     console.log(a);
 //     let c = 10
+//     console.log(c);
 //     return function(b){
 //         console.log(a + c + b)
 //     }
 // }
-// sum(5) //print only a
+// // sum(5) //print only a
 // let res = sum(5); //print a and return a function and store inside res
 // console.log(res); //print returned function
 // res(7); // print a+c+b
@@ -37,3 +36,64 @@
 // console.log(obj);
 // obj.getSumOfTwo()
 // obj.getSumOfThree()
+
+//TODO Debouncing
+
+
+const inputElement = document.querySelector("#debounce-input");
+let numberOfKeyPressed = 0;
+let numberofApiCalls = 0;
+
+function debounce(callBack, delay) {
+  var timeoutId;
+  return (...args) => {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => {
+      callBack(...args);
+    }, delay);
+  };
+}
+
+const getSearchResult = debounce(() => {
+  numberofApiCalls += 1;
+  console.log("No. Of Api Calls : " + numberofApiCalls);
+}, 1000);
+
+inputElement.addEventListener("input", (e) => {
+  numberOfKeyPressed += 1;
+  console.log("Search KeyWord : " + e.target.value);
+  console.log("No. Of KeyPressed : " + numberOfKeyPressed);
+  getSearchResult();
+});
+
+//TODO Throattling
+
+const inputElement2 = document.querySelector("#throttle-input");
+let numberOfKeyPressed2 = 0;
+let numberofApiCalls2 = 0;
+
+//* when we call throttle function  it runs the callback imidiatly at frst time event triggered, but after that it holds the call back execution untill delay time passed then again excutes the call back
+function throttle(calls, delay) {
+  let shouldWait = false;
+  return (...args) => {
+    if (shouldWait) return;
+    calls(...args);
+    shouldWait = true;
+    setTimeout(() => {
+      shouldWait = false; 
+    }, delay);
+  };
+}
+
+const getResults = throttle(() => {
+  numberofApiCalls2 += 1;
+  console.log("No. of API calls : " + numberofApiCalls2);
+}, 2000);
+
+inputElement2.addEventListener("input", (e) => {
+  numberOfKeyPressed2 += 1;
+  console.log("Throttled Search Keyword : " + e.target.value);
+  console.log("No. of key pressed : " + numberOfKeyPressed2);
+
+  getResults();
+});
